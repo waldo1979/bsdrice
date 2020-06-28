@@ -1,0 +1,44 @@
+--- config.def.h.orig	2020-06-21 07:38:16.352614000 -0700
++++ config.def.h	2020-06-21 07:40:22.661363000 -0700
+@@ -5,8 +5,8 @@
+  *
+  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
+  */
+-static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
+-static int borderpx = 2;
++static char *font = "Inconsolata:style=Regular:size=14:antialias=true";
++static int borderpx = 0;
+ 
+ /*
+  * What program is execed by st depends of these precedence rules:
+@@ -16,7 +16,7 @@
+  * 4: value of shell in /etc/passwd
+  * 5: value of shell in config.h
+  */
+-static char *shell = "/bin/sh";
++static char *shell = "/usr/local/bin/bash";
+ char *utmp = NULL;
+ /* scroll program: to enable use a string like "scroll" */
+ char *scroll = NULL;
+@@ -85,7 +85,7 @@
+ unsigned int tabspaces = 8;
+ 
+ /* bg opacity */
+-float alpha = 0.8;
++float alpha = 0.9;
+ 
+ /* Terminal colors (16 first used in escape sequence) */
+ static const char *colorname[] = {
+@@ -106,6 +106,12 @@
+ 	"#6c71c4",  /* 13: brmagenta*/
+ 	"#93a1a1",  /* 14: brcyan   */
+ 	"#fdf6e3",  /* 15: brwhite  */
++
++	[255] = 0,
++	/* more colors can be added after 255 to use with DefaultXX */
++	"#282828",   /* 256 -> bg */
++	"#ebdbb2",   /* 257 -> fg */
++	"#add8e6", /* 258 -> cursor */
+ };
+ 
+ /* Terminal colors for alternate (light) palette */

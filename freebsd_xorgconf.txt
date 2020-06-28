@@ -1,0 +1,16 @@
+Section "Files"
+	FontPath	"/usr/local/share/fonts/"
+EndSection
+Section "InputDevice"
+	Identifier	"Touchpad"
+	#Driver		"mouse"
+	Driver		"libinput"
+	#Option		"Protocol"	"auto"
+	#Option		"Device"	"/dev/sysmouse"
+	Option		"Device"	"/dev/input/event3"
+	#Option		"ZAxisMapping"	"4 5 6 7"
+	Option		"DisableWhileTyping" "on"
+EndSection
+Section "Module"
+	Load		"freetype"
+EndSection

@@ -1,0 +1,9 @@
+wget https://dwm.suckless.org/patches/alpha/dwm-alpha-20180613-b69c870.diff
+wget https://dwm.suckless.org/patches/alpha/dwm-fixborders-6.2.diff
+wget https://dwm.suckless.org/patches/fibonacci/dwm-fibonacci-20200418-c82db69.diff
+#wget https://dwm.suckless.org/patches/statuscolors/dwm-statuscolors-20181008-b69c870.diff
+wget https://dwm.suckless.org/patches/three-column/tcl.c
+wget https://dwm.suckless.org/patches/uselessgap/dwm-uselessgap-6.2.diff
+#wget https://dwm.suckless.org/patches/systray/dwm-systray-6.2.diff
+wget https://github.com/jgrar/dwm-patches/blob/master/statuscolors/dwm-statuscolors-nopad-systray-20180106-db22360.patch
+wget https://dwm.suckless.org/patches/pango/dwm-pango-20200428-f09418b.diff
