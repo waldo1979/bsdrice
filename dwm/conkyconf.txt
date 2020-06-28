@@ -1,0 +1,32 @@
+conky.config = {
+out_to_console = true,
+out_to_x = false,
+background = false,
+update_interval = 2, 
+total_run_times = 0,
+use_spacer = 'none',
+}
+
+conky.text = [[
+TEST \
+${if_match false == false}
+\\uf578 \\uf579 \\uf57a \\uf57c \\uf57c \\uf57d \\uf57e \\uf57f \\uf580 \\uf581 \\uf582\
+${endif}\
+${ -- Battery Monitoring }\
+${if_match ${battery_percent BAT0} < 5}A\\uf582${endif}\
+${if_match ${battery_percent BAT0} >= 5}${if_match ${battery_percent BAT0} <=10}${endif}\\uf579${endif}\
+${if_match ${battery_percent BAT0} >= 10}${if_match ${battery_percent BAT0} < 20}\\uf57a${endif}${endif}\
+${if_match ${battery_percent BAT0} >= 20}${if_match ${battery_percent BAT0} < 30}\\uf57b${endif}${endif}\
+${if_match ${battery_percent BAT0} >= 30}${if_match ${battery_percent BAT0} < 40}\\uf57c${endif}${endif}\
+${if_match ${battery_percent BAT0} >= 40}${if_match ${battery_percent BAT0} < 50}\\uf57d${endif}${endif}\
+${if_match ${battery_percent BAT0} >= 50}${if_match ${battery_percent BAT0} < 60}\\uf57e${endif}${endif}\
+${if_match ${battery_percent BAT0} >= 60}${if_match ${battery_percent BAT0} < 70}\\uf57f${endif}${endif}\
+${if_match ${battery_percent BAT0} >= 70}${if_match ${battery_percent BAT0} < 80}\\uf580${endif}${endif}\
+${if_match ${battery_percent BAT0} >= 80}${if_match ${battery_percent BAT0} < 90}\\uf581${endif}${endif}\
+${if_match ${battery_percent BAT0} >= 90}${if_match ${battery_percent BAT0} <= 99}\\uf578${endif}${endif}\
+ ${battery_percent BAT0}%%
+]]
+
+--[[
+${cpu cpu1}% | ${cpu cpu2}% :: ${acpitemp}c :: ${downspeed wlan0}D | ${upspeed wlan0}U :: ${time %a %b %d %I:%M%P}
+]]
